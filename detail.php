@@ -48,5 +48,32 @@ echo "<h3>结束时间：".$end."</h3>";
     left:500px;
 }
 </style>
+
+<div class="c" style='margin-top:10px;'>
+	<?php 
+	$id=$model->id;
+    
+	if(strtotime('now')>strtotime($start)&&strtotime('now')<strtotime($end)){
+	        echo "
+     <form action=\"../views/peroid/handle.php\" >
+        <input class='form-control' type=\"text\" class=\"pf\" name=\"name\" placeholder=\"真实姓名\">
+		<br>
+		<input class='form-control' type=\"text\" class=\"pf\" name=\"id\" placeholder=\"身份证号码\">
+		<br>
+		<input class='form-control' type=\"text\" class=\"pf\" name=\"tel\" placeholder=\"电话\">
+		<br>
+		<input class='form-control' type=\"text\" class=\"pf\" name=\"num\" placeholder=\"预约数量\">	
+		<input value=$id type=\"text\" style=\"display: none;\" name=\"period_id\"  >	
+		<input value=$max type=\"text\" style=\"display: none;\" name=\"max\" >	
+		<input value=$left type=\"text\" style=\"display: none;\" name=\"left\" >	
+		<br>		  
+		<input class='btn-primary' value=\"提交\" class=\"pk\" name=\"submit\" type=\"submit\"/>
+	</form>
+            ";
+	   }
+	   else{
+	       echo "现在不是当期预约的预约时间";
+	   }
+	?>
 	
 </div>
