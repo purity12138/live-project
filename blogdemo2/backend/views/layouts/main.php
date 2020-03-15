@@ -37,6 +37,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => '预约期数', 'url' => ['/peroid/index']],
+        ['label' => '预约记录', 'url' => ['/appointment/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => '登陆', 'url' => ['/site/login']];
