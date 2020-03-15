@@ -1,4 +1,3 @@
-//end。php
 
 <?php
 header("Content-Type: text/html;charset = utf-8");
@@ -21,6 +20,8 @@ if($row=mysqli_fetch_array($result)){
     $sql="UPDATE peroid SET test = 2 WHERE test ='".'1'."'";
     if ($conn->query($sql) === TRUE) {
         echo "已结束当前进行中的预约，进行抽签操作";
+    }else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
     $sql="SELECT * FROM appointment WHERE period_id ='".$id."'";
     $result = mysqli_query($conn,$sql);
@@ -30,14 +31,21 @@ if($row=mysqli_fetch_array($result)){
             $sql="UPDATE appointment SET win ='".$row[3]."'WHERE id ='".$row[0]."'";
             if ($conn->query($sql) === TRUE) {
                 echo $row[7]."获得".$row[3]."个口罩购买资格</br>";
+            }else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
             }
+        }
+        else if($count==0){
+            break;
         }
         else{
             $sql="UPDATE appointment SET win ='".$count."'WHERE id ='".$row[0]."'";
             if ($conn->query($sql) === TRUE) {
                 echo $row[7]."获得".$count."个口罩购买资格</br>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
             }
-            break;
+			break;
         }
     }
 }
