@@ -1,1 +1,11 @@
-页面3的css
+#页面3比较简单用前面的css
+/*以下是页面4css,也比较简单*/
+.divmain
+{
+    display: block;
+    margin:8px;
+}
+.divmiddle
+{
+    text-align: center;
+}
