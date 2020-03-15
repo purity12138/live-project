@@ -30,5 +30,45 @@ function calcIDCardCode($IDCardBody) {
     return $code[$checksum % 11];
 }
 
+// 将15位身份证升级到18位
+function convertIDCard15to18($IDCard) {
+    if (strlen($IDCard) != 15) {
+        return false;
+    } else {
+        // 如果身份证顺序码是996 997 998 999，这些是为百岁以上老人的特殊编码
+        if (array_search(substr($IDCard, 12, 3), array('996', '997', '998', '999')) !== false) {
+            $IDCard = substr($IDCard, 0, 6) . '18' . substr($IDCard, 6, 9);
+        } else {
+            $IDCard = substr($IDCard, 0, 6) . '19' . substr($IDCard, 6, 9);
+        }
+    }
+    $IDCard = $IDCard . calcIDCardCode($IDCard);
+    return $IDCard;
+}
+
+// 18位身份证校验码有效性检查
+function check18IDCard($IDCard) {
+    if (strlen($IDCard) != 18) {
+        return false;
+    }
+    
+    $IDCardBody = substr($IDCard, 0, 17); //身份证主体
+    $IDCardCode = strtoupper(substr($IDCard, 17, 1)); //身份证最后一位的验证码
+    
+    if (calcIDCardCode($IDCardBody) != $IDCardCode) {
+        return false;
+    } else {
+        return true;
+    }
+}
+function check_phone($phone){
+    $check = '/^(1(([35789][0-9])|(47)))\d{8}$/';
+    if (preg_match($check, $phone)) {
+        return true;
+    } 
+    else {
+        return false;
+    }
+}
 
 ?>
