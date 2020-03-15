@@ -1,10 +1,18 @@
 # live-project
 团队作业第二次——团队Github实战训练 
 
-## 1. 最终服务器展示平台地址：[地址](http://129.204.247.165/blogdemo2/frontend/web/index.php?r=peroid%2Findex)  
+## 1. 最终服务器展示前端地址：[地址](http://129.204.247.165/blogdemo2/frontend/web/index.php?r=peroid%2Findex)  
+## 2. 最终服务器展示后台地址：[地址](http://129.204.247.165/blogdemo2/backend/web/index.php?r=appointment%2Findex)
 ## 2. 题目需求  
 &emsp;&emsp;在全国人民的共同努力下，新冠肺炎疫情得到逐步缓解，国内多地已经出现零确诊。然而当前国内形势严峻，多国疫情出现大爆发，国内出现了多例的输入病例，此时国人仍不可掉以轻心，外出需要注意个人防护，特别是要佩戴好口罩。虽然国内口罩等防护用品的产能和供应量在逐步增长，但目前还不能完全充分满足需求，仍然需要按需进行预约。  
-&emsp;&emsp;假如，城市A需要开发一个向社会限量供应的口罩应用，现要外包给你们组完成这个任务。
+&emsp;&emsp;假如，城市A需要开发一个向社会限量供应的口罩应用，现要外包给你们组完成这个任务。  
+&emsp;&emsp;管理员发布预约摇号活动
+* 管理员登录
+* 设置预约的开放时间和截止时间
+* 设置预约时单个用户最高可预约数量
+* 设置口罩总数
+* 导出某次中签的名单
+
 ## 3. 分析问题  
 1. 预约功能：
 
@@ -33,3 +41,6 @@
 <div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_2003151145491.png"/></div>  
 <div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_2003151145552.png"/></div>  
 <div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_2003151146003.png"/></div>  
+
+<div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_2003151232414.png"/></div>  
+<div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_2003151232475.png"/></div>  
