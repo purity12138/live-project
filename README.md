@@ -33,7 +33,7 @@
 &emsp;&emsp;
 ## 4. 分工情况  
 
-<div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_200315113710MOX8A$~QI7~5(%7DBJRTV@BYD.png"/></div>   
+<div align=center><img src="https://images.cnblogs.com/cnblogs_com/yjchen/1645851/o_200315135822fengong.png"/></div>   
 
 ## 5. 总结  
 &emsp;&emsp;这次的作业十分贴合主题，我们今天早上接收到任务之后，要在晚上之前完成变成任务，对于大家来说都是不小的挑战，感谢的是，队友们上学期的web学的很好，也很好的应用了yii这个很好的php框架，完成了任务。同学们非常努力的完成了自己的编码任务，过程中能够更好的学习web，php语言，以及相互分工如何协调，最难的就是最后的整合问题了，相信每个小组也都是这样过五关斩六将，集体努力，慢慢发挥着自己的光和热。  
