@@ -14,31 +14,34 @@ use yii\grid\GridView;
 <div class="peroid-index">
 	<?php 
 
+	$lives = Peroid::find()->all();
 	//var_dump($lives);
 	print_r("<table class=\"table\">
 	<caption>"."预约"."</caption>
 	<thead>
-		<tr>
-			<th>开始时间</th>
-			<th>结束时间</th>
-			<th>可预约数</th>
-			<th>口罩总数</th>
-			<th>预约</th>
-		</tr>
+	   <tr>
+		  <th>开始时间</th>
+		  <th>结束时间</th>
+		  <th>可预约数</th>
+		  <th>口罩总数</th>
+		  <th>预约</th>
+	   </tr>
 	</thead>
 	");
 
-	print_r("
-	<tbody>
-		<tr>
-			<td class='content'></td>
-			<td class='content'></td>
-			<td class='content'></td>
-			<td class='content'></td>
-			<td class='content'>"."<a href=\"\">预约"."</td>
-		</tr>
-	</tbody>
-	");
+	for($i=0;$i<count($lives);$i++){
+		print_r("
+			<tbody>
+				<tr>
+					<td class='content'>".$lives[$i]->start_time."</td>
+					<td class='content'>".$lives[$i]->endtime."</td>
+					<td class='content'>".$lives[$i]->num."</td>
+					<td class='content'>".$lives[$i]->total."</td>
+					<td class='content'>"."<a href=\"".$lives[$i]->url."\">预约"."</td>
+				</tr>
+			</tbody>
+		");
+	}
 
 
 	print_r("</table>");
