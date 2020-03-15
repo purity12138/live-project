@@ -39,6 +39,25 @@ if ($conn->connect_error) {
       }
   }
 
+  if($jud==1){
+      do {
+          $code=rand(10000, 99999);
+          $sql="SELECT *
+      FROM appointment
+      WHERE serial ='".$_GET['id']."'
+      and win <> '".'0'."'
+      ";
+          $result = mysqli_query($conn,$sql);
+      }while($row=mysqli_fetch_array($result));
+
+      $sql = "INSERT INTO appointment (name, identify, tel, number, period_id, serial) values
+      ('".$name."','".$indentify."', '".$tel."', '".$number."', '".$peroid_id."', '".$code."')";
+      if ($conn->query($sql) === TRUE) {
+          echo "<script>alert('预约成功，你的预约编号为$code')</script>";
+      } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+  }
 
    $conn->close();
 ?>
