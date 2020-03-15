@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.unav{
+	width:200px;
+	height:500px;
+	float:left;
+	positon:relative;
+	top:50px;
+}
+.nav{
+	height:40px;
+	margin:10px;
+	background-color:#F6F6F6;
+}
+.nav:hover{
+	background-color:#F39F28;
+}
+.link{
+	text-align:center;
+	line-height: 40px;
+	font-size:20px;
+}
+.link:hover{
+	text-decoration:none;
+}
+.head{
+	margin:10px 0 0 50px;
+	background-color:#F5F5F5;
+}
+.inhead{
+	display: inline-block;
+	text-align:center;
+	font-size:15px;
+}
