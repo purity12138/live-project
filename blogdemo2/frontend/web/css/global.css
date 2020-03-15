@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* GLOBAL - BEGIN */
+
+body {
+	margin:0px;
+	padding:0px;
+	background:pink;	
+}
+.hidden {
+	display:none;	
+}
+#pagewrap {
+	position:relative;	
+}
+.column {
+	float:left;	
+}
+a, a:visited {
+	color:#FFF;
+	text-decoration:none;	
+}
+a:hover {
+	text-decoration:underline;	
+}
+#p{
+	width:16%;
+	margin:0px 10px 0px 10px;
+	border:20px;
+	solisd:#000;
+	position:relative;
+	left:3.5%;
+}
